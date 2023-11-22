@@ -1,0 +1,13 @@
+.carousel .slide img {
+  max-width: 650px;
+  height: 420px;
+ }
+
+h1 {
+    text-align:center;
+    margin-right: 3rem;
+    font-size: 50px;
+    color:#2b422d;
+    font-style:italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

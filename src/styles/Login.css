@@ -1,0 +1,99 @@
+body{
+  background: linear-gradient(90deg ,  #baf3c3 , #6fb180 , #baf3c3);
+}
+
+.title {
+font-size: 30px;
+  text-align: center;
+  margin: 0px auto 20px;
+}
+
+.sesion-img {
+  width: 95px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  margin: 0px auto -30px;
+  border-radius: 50%;
+  background-image: url(../images/logo_restaurant.png);
+  background-size: cover;
+  top: -60px;
+}
+
+.container-main {
+  width: 600px;
+
+  font-family: sans-serif;
+  margin: 50px auto;
+}
+.form {
+  background-color: #448a48;
+  font-family: sans-serif;
+  
+}
+
+
+.container-main .form {
+  border: 1px solid rgb(240, 232, 232);
+  border-radius: 14px;
+  padding: 20px;
+  color: #ffffff;
+}
+.container-main .form label {
+  padding: 10px 10px;
+  display: inline-block;
+  justify-self: left;
+  color: black;
+  font-weight: bold;
+  width: 6rem;
+  margin-left: 0.7rem;    
+}
+
+.container-main .form .data {
+display: flex;
+margin-bottom: 20px;
+width: 500px;
+}
+
+.container-main .form .input {
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  width: 80%;
+}
+.container-main .form .input[type='submit'] {
+ display: block;
+  background-color: #448a48;
+  color: white;
+  font-size: 14px;
+  font-weight:bolder;
+  cursor: pointer;
+  width: 200px;
+  margin: 0px auto 20px;
+}
+.container-main .form .input[type='submit']:hover {
+  outline: 1px solid #45814d;
+  background-color: #45814d;
+  color: #ffffff;
+
+}
+a {
+text-align: center;
+width: 32rem;
+  display: block;
+  text-decoration: none;
+  color: rgb(21, 102, 45);
+  font-size:medium;
+  font-style:oblique;
+  font-family: 'sans-serif';
+  margin: 0px auto 0px;
+}
+
+.error {
+  color: rgb(110, 9, 9);
+  width: 35rem;
+  margin: 1rem auto 1rem;
+  font-family: 'sans-serif';
+}

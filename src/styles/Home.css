@@ -1,0 +1,57 @@
+
+
+h1 {
+    text-align:center;
+    margin-right: 3rem;
+    font-size: 50px;
+    color:#2b422d;
+    font-style:italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  h2 {
+    text-align:center;
+    font-size: 35px;
+    color:#e6f0e6;
+    font-style:italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+.register-btn,
+.login-btn {
+display:inline-block;
+ width: 350px;
+ background-color: #409e54;
+ color: white;
+ text-decoration:none;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ font-style: italic;
+ font-size:large;
+ padding: 8px 3px;
+ border-radius: 5px;
+ margin-top: 10px;
+}
+
+.register-btn:hover,
+.login-btn:hover {
+ background-color: #2a683a;
+ color: rgb(255, 255, 255);
+}
+
+
+.links {
+        text-align: center;
+        width: 32rem;
+        display: block;
+        text-decoration: none;
+        color: rgb(21, 102, 45);
+        font-size: 3rem;
+        font-style:oblique;
+        font-family: 'sans-serif';
+        margin: 0px auto 0px; 
+}
+
+.links:hover {
+    color: red;
+}
+

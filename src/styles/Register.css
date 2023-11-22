@@ -1,0 +1,119 @@
+body{
+    background: linear-gradient(90deg ,  #b8ddbd , #6fb180 , #b8ddbd);
+  }
+  
+  h1 {
+    text-align:center;
+    margin: 2rem;
+    font-size: 20px;
+    color:#2b422d;
+    font-family:sans-serif;
+  }
+  
+  .container {
+    width: 900px;
+    font-family: sans-serif;
+    margin: 50px auto;
+  }
+  
+  form {
+    background: linear-gradient(90deg , #fbffff, #e9e8d6, #fbffff );
+  }
+  
+  .container form {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    padding: 0 400px 20px 0;
+  }
+  
+  .container form label {
+    display: flex;
+    justify-self: left;
+    color: black;
+    font-weight: bold;
+    margin-left: 2em;
+    transform: translateX(10%) translateY(80%);
+  }
+  
+  .container form input {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    width: 40%;
+  }
+  
+  .container form input[type='text'] {
+    transform: translateX(30%) translateY(-40%);
+  }
+  
+  .container form input[type='password'] {
+    transform: translateX(30%) translateY(-40%);
+  }
+  
+  .container form input[type='submit'] {
+    background-color: #448a48;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 60%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .container form input[type='submit']:hover {
+    outline: 1px solid #347237;
+    background-color: #347237;
+    color: #000000;
+  
+  }
+  
+  .container form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .a {
+  text-align: center;
+  width: 32rem;
+  display: block;
+  text-decoration: none;
+  color: rgb(21, 102, 45);
+  font-size:medium;
+  font-style:oblique;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0px auto 0px;
+  }
+
+  
+  .a:hover {
+    text-align: center;
+    width: 32rem;
+    display: block;
+    text-decoration: none;
+    color: rgb(4, 77, 25);
+    font-size:medium;
+    font-style:oblique;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px auto 0px;
+    }
+
+  .img {
+    transform: translateX(55%) translateY(-135%);
+    width: 370px;
+  }
+
+  .error {
+    color: rgb(110, 9, 9);
+    width: 35rem;
+    margin: 1rem auto 1rem;
+    font-family: 'sans-serif';
+  }
+
+  .succ {
+    color: rgb(41, 110, 9);
+    width: 35rem;
+    margin: 1rem auto 1rem;
+    font-family: 'sans-serif';
+  }
