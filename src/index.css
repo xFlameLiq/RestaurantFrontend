@@ -17,11 +17,12 @@
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(90deg ,  #b8ddbd , #6fb180 , #b8ddbd);
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -33,6 +34,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
