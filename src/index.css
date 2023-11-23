@@ -20,6 +20,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(90deg ,  #b8ddbd , #6fb180 , #b8ddbd);
 }
 
 button {
