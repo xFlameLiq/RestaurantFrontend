@@ -2,7 +2,7 @@ body{
     background: linear-gradient(90deg ,  #b8ddbd , #6fb180 , #b8ddbd);
   }
   
-  h1 {
+.titleRegister {
     text-align:center;
     margin: 2rem;
     font-size: 20px;

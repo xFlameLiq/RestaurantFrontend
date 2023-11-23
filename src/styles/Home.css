@@ -1,6 +1,4 @@
-
-
-h1 {
+.titleHome {
     text-align:center;
     margin-right: 3rem;
     font-size: 50px;
@@ -9,7 +7,7 @@ h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  h2 {
+.subtitleHome {
     text-align:center;
     font-size: 35px;
     color:#e6f0e6;

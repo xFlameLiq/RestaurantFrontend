@@ -2,10 +2,12 @@ body{
   background: linear-gradient(90deg ,  #baf3c3 , #6fb180 , #baf3c3);
 }
 
-.title {
-font-size: 30px;
+.titleLogin {
   text-align: center;
-  margin: 0px auto 20px;
+  margin: 2rem;
+  font-size: 20px;
+  color: #2b422d;
+  font-family: sans-serif;
 }
 
 .sesion-img {

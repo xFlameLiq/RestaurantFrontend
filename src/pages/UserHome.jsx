@@ -12,7 +12,7 @@ const UserHome = () => {
 
  return(
     <>
-      <h1>BIENVENIDO!!!</h1>
+      <h1 className="titleUserHome">BIENVENIDO!!!</h1>
       <Carousel autoPlay interval={3000} infiniteLoop>
         <div>
           <img src={restaurant} alt="Imagen 1" />

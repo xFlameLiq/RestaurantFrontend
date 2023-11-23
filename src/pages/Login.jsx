@@ -44,6 +44,11 @@ const Login = () => {
 
       if(data.code === "SUCCESS_AUTH") {
         setMsgAuthSucc(true);
+          // if(data.user.username === "admin@admin") {
+          //   navigate("/AdminHome")
+          // } else {
+                
+          // }
         navigate("/UserHome");
         return
       }
@@ -65,7 +70,7 @@ const Login = () => {
     <div className="container-main">
       <form className="form" id="form" onSubmit={onSubmitLogin}>
         <div className="sesion-img"></div>
-        <h1 className="title">Welcome</h1>
+        <h1 className="titleLogin">Welcome</h1>
         <div className="data">
           <label>Email:</label>
           <input className="input" type="text" name="" id="" value={username} onChange={handleEmail} />

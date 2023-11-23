@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from '@mui/material';
 import '../styles/Register.css';
 import iconRes from '../images/logo_restaurant.png';
 
@@ -78,7 +79,7 @@ const Register = () => {
   return (
     <div className="container">
       <form id="form" onSubmit={onSubmitRegister}>
-        <h1>Create an account</h1>
+        <h1 className="titleRegister">Create an account</h1>
         <label>Name:</label>
         <input type="text" required name="" id="" value={name} onChange={handleName} />
         <label>Last name:</label>
