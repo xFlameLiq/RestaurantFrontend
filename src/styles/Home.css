@@ -6,50 +6,34 @@
     font-style:italic;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
+.linkLogin {
+    text-align: center;
+      display: block;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-family: "Roboto","Helvetica","Arial",sans-serif;
+      font-weight: 500;
+      font-size: 1.25rem;
+      margin: 0px auto 0px;
+    }
 
-.subtitleHome {
-    text-align:center;
-    font-size: 35px;
-    color:#e6f0e6;
-    font-style:italic;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-.register-btn,
-.login-btn {
-display:inline-block;
- width: 350px;
- background-color: #409e54;
- color: white;
- text-decoration:none;
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- font-style: italic;
- font-size:large;
- padding: 8px 3px;
- border-radius: 5px;
- margin-top: 10px;
+.linkLogin:hover {
+  color:rgb(7, 57, 133);
 }
 
-.register-btn:hover,
-.login-btn:hover {
- background-color: #2a683a;
- color: rgb(255, 255, 255);
+.slider {
+  z-index: -20;
+}
+
+.margin {
+  margin-top: 10rem;
 }
 
 
-.links {
-        text-align: center;
-        width: 32rem;
-        display: block;
-        text-decoration: none;
-        color: rgb(21, 102, 45);
-        font-size: 3rem;
-        font-style:oblique;
-        font-family: 'sans-serif';
-        margin: 0px auto 0px; 
+.comida {
+  width: 1280px;
+  height: 720px;
 }
 
-.links:hover {
-    color: red;
-}
+
 

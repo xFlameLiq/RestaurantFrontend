@@ -77,17 +77,6 @@ width: 500px;
   color: #ffffff;
 
 }
-a {
-text-align: center;
-width: 32rem;
-  display: block;
-  text-decoration: none;
-  color: rgb(21, 102, 45);
-  font-size:medium;
-  font-style:oblique;
-  font-family: 'sans-serif';
-  margin: 0px auto 0px;
-}
 
 .error {
   color: rgb(110, 9, 9);
