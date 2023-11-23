@@ -1,4 +1,4 @@
-body{
+.body{
     background: linear-gradient(90deg ,  #b8ddbd , #6fb180 , #b8ddbd);
   }
   
@@ -16,7 +16,7 @@ body{
     margin: 50px auto;
   }
   
-  form {
+  .form {
     background: linear-gradient(90deg , #fbffff, #e9e8d6, #fbffff );
   }
   
