@@ -1,6 +1,6 @@
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
-import CardHome from '../components/cardHome';
+import CardHome from '../components/CardHome';
 import img1 from '../images/ordenar.jpg';
 import img2 from '../images/ticket.jpg';
 import img3 from '../images/empleado.jpg';

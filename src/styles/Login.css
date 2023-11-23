@@ -1,3 +1,7 @@
+.body{
+  background: linear-gradient(90deg ,  #baf3c3 , #6fb180 , #baf3c3);
+}
+
 .titleLogin {
   text-align: center;
   margin: 2rem;
@@ -15,7 +19,7 @@
   position:relative;
   margin: 0px auto -30px;
   border-radius: 50%;
-  background-image: url(../images/logo_restaurant.png);
+  background-image: url(../images/logo_restaurant.jpg);
   background-size: cover;
   top: -60px;
 }

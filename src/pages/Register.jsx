@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from '@mui/material';
 import '../styles/Register.css';
-import iconRes from '../images/logo_restaurant.png';
+import iconRes from '../images/logo_restaurant.jpg';
 
 const Register = () => {
 
