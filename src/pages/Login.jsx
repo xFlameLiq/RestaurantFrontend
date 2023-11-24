@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
 import '../styles/Login.css';
 
-const LoginMUI = () => {
+const Login = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     username: '',
@@ -96,4 +96,4 @@ const LoginMUI = () => {
   );
 };
 
-export default LoginMUI;
+export default Login;
