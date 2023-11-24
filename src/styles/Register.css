@@ -14,7 +14,7 @@
   }
   
   .form {
-    background: linear-gradient(90deg , #fbffff, #e9e8d6, #fbffff );
+   
   }
   
   .container form {
@@ -22,6 +22,7 @@
     border: 1px solid #ccc;
     border-radius: 14px;
     padding: 0 400px 20px 0;
+    background-color: #fff;
   }
   
   .container form label {

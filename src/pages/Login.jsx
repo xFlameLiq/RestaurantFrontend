@@ -1,95 +1,99 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from "@mui/material";
+import { TextField } from "@mui/material";
+import { Box } from "@mui/material";
+import { Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import '../styles/Login.css';
 
-
-const Login = () => {
-
+const LoginMUI = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState({
+    username: '',
+    password: ''
+  });
+  const [msgAuth, setMsg] = useState(false);
 
-  const [username, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState({});
-  const [msgValError, setMsgValError] = useState(false);
-  const [msgAuthError, setMsgAuthError] = useState(false);
-  const [msgAuthSucc, setMsgAuthSucc] = useState(false);
-
-  function onSubmitLogin(evt) {
-    evt.preventDefault();
-    fetch('https://backend-8ts0.onrender.com/login', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json;charset=UTF-8'
-      },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-
-    }).then(res => res.json())
-    .then(data => {
-      console.log(data)
-
-      if(data.error === "ERR_VALIDATION") {
-        setMsgValError(true);
-        setMsgAuthError(false);
-        return console.log("DATOS DE VALIDACIÓN ERRONEOS");
-      }
-
-      if(data.code === "ERR_AUTH") {
-        setMsgAuthError(true);
-        setMsgValError(false);
-        return console.log("CONTRASEÑA O USUARIO NO ENCONTRADO")
-    }
-
-      if(data.code === "SUCCESS_AUTH") {
-        setMsgAuthSucc(true);
-          // if(data.user.username === "admin@admin") {
-          //   navigate("/AdminHome")
-          // } else {
-                
-          // }
-        navigate("/UserHome");
-        return
-      }
-
-  })
-    .catch((err) => console.log(err))
-  }
-  
-
-  function handleEmail(evt) {
-    setEmail(evt.target.value);
+  const handleUsername = (e) => {
+    const userLogin = {...user};
+    userLogin.username = e.target.value;
+    setUser(userLogin);
   }
 
-  function handlePassword(evt) {
-    setPassword(evt.target.value);
+  const handlePassword = (e) => {
+    const userLogin = {...user};
+    userLogin.password = e.target.value;
+    setUser(userLogin);
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios.post("https://backend-8ts0.onrender.com/login", user)
+    .then((res) => {
+      navigate('/UserHome');
+      return;
+    })
+    .catch((error) => {
+      setMsg(true);
+    });
+  };
 
   return (
-    <div className="container-main">
-      <form className="form" id="form" onSubmit={onSubmitLogin}>
+    <Container className="contLog"component="main" maxWidth="sm">
+      <Box
+        sx={{
+          boxShadow: 3,
+          borderRadius: 2,
+          px: 4,
+          py: 6,
+          marginTop: 8,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <div className="sesion-img"></div>
-        <h1 className="titleLogin">Welcome</h1>
-        <div className="data">
-          <label>Email:</label>
-          <input className="input" type="text" name="" id="" value={username} onChange={handleEmail} />
-        </div>
-        <div className="data">
-          <label>Password:</label>
-          <input className="input" type="password" name="" id="" value={password} onChange={handlePassword} />
-        </div>
-        {msgValError ? <p className="error">ES NECESARIO EL CAMPO USUARIO Y/O CONTRASEÑA (SE REQUIERE UNA CONTRASEÑA DE AL MENOS 8 DE LONGITUD)</p> : null}
-        {msgAuthError ? <p className="error">ERROR, USUARIO NO ENCONTRADO</p> : null}
-        {msgAuthSucc ? <p className="error">USUARIO ENCONTRADO, REDIRIGIENDO...</p> : null}
-        <input className="input" type="submit" value="Enter" />
-        <Link className="a" to="/Register">
-          ¿Don't have an account? Register
-        </Link>
- 
-      </form>
-    </div>
+        <Typography component="h1" variant="h5">
+          Welcome
+        </Typography>
+        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            id="username"
+            label="Username"
+            name="username"
+            autoFocus
+            value={user.username}
+            onChange={handleUsername}
+          />
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            value={user.password}
+            onChange={handlePassword}
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Sign In
+          </Button>
+        </Box>
+        {msgAuth ? <Typography color="#6e0909" variant="caption">wrong username or password</Typography> : null}
+      </Box>
+    </Container>
   );
-}
+};
 
-export default Login;
+export default LoginMUI;

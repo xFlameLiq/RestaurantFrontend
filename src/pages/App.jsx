@@ -5,7 +5,6 @@ import Register from './Register';
 import Home from './Home';
 import UserHome from './UserHome';
 import NotFound from './NotFound';
-import LoginMUI from './LoginMUI';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Route path='/Login' element={<Login/>} />
           <Route path='/Register' element={<Register/>} />
           <Route path='/UserHome' element={<UserHome/>} />
-          <Route path='/LoginMUI' element={<LoginMUI/>} />
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

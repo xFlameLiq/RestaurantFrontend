@@ -5,10 +5,11 @@ import img1 from '../images/ordenar.jpg';
 import img2 from '../images/ticket.jpg';
 import img3 from '../images/empleado.jpg';
 import img4 from '../images/comida.jpg';
+import "../styles/UserHome.css";
 
 const UserHome = () => {
 
-  const userType = false;
+  const userType = true;
   const cardsEmploye = [
     {
       img: img1,
@@ -43,7 +44,7 @@ const UserHome = () => {
  return(
   <>
     <h1>¡Bienvenido {tipo}!</h1>
-    <Stack
+    <Stack className="contAct"
       direction="row"
       divider={<Divider orientation="vertical" flexItem />}
       spacing={2}
