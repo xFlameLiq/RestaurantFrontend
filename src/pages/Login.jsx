@@ -41,8 +41,8 @@ const LoginMUI = () => {
   };
 
   return (
-    <Container className="contLog"component="main" maxWidth="sm">
-      <Box
+    <Container component="main" maxWidth="sm">
+      <Box className="contLog"
         sx={{
           boxShadow: 3,
           borderRadius: 2,
