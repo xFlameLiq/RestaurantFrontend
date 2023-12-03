@@ -5,6 +5,7 @@ import Register from './Register';
 import Home from './Home';
 import UserHome from './UserHome';
 import NotFound from './NotFound';
+import AlimentForm from './AlimentForm'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/Register' element={<Register/>} />
           <Route path='/UserHome' element={<UserHome/>} />
           <Route path='*' element={<NotFound/>} />
+          <Route path='/aliment' element={<AlimentForm/>} />
         </Routes>
       </BrowserRouter>
     </div>

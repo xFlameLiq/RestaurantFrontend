@@ -1,0 +1,10 @@
+.form-container{
+    background-color: #fff ;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    margin-top: 3em;
+}
+
+.form-title{
+    color: black;
+}
