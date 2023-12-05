@@ -9,7 +9,7 @@ import "../styles/UserHome.css";
 
 const UserHome = () => {
 
-  const userType = false;
+  const userType = true;
   const cardsEmploye = [
     {
       img: img1,

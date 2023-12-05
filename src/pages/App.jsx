@@ -19,7 +19,7 @@ function App() {
           <Route path='/Register' element={<Register/>} />
           <Route path='/UserHome' element={<UserHome/>} />
           <Route path='*' element={<NotFound/>} />
-          <Route path='/aliment' element={<AlimentForm/>} />
+          <Route path='/Aliment' element={<AlimentForm/>} />
         </Routes>
       </BrowserRouter>
     </div>
