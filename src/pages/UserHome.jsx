@@ -48,7 +48,7 @@ const UserHome = () => {
   const tipo = userType ? 'Administrador' : 'Empleado';
 
   const test = (e) =>{
-    const jwt = localStorage.getItem('user');
+    const jwt = localStorage.getItem('jwt');
     console.log(jwt);
     axios.get("https://backend-8ts0.onrender.com/admins", {
       headers: { Authorization: `Bearer ${jwt}` }
