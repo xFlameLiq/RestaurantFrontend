@@ -33,7 +33,7 @@ const Login = () => {
     axios.post("https://backend-8ts0.onrender.com/login", user)
     .then((res) => {
       localStorage.setItem('jwt', res.data.jwt);
-      navigate('/UserHome');
+      navigate('/UserHome',{state: {email: user.username}});
       return;
     })
     .catch((error) => {

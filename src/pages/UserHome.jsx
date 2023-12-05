@@ -1,5 +1,7 @@
 // import { useLocation } from 'react-router-dom';
 // import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import axios from 'axios';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
@@ -12,8 +14,9 @@ import "../styles/UserHome.css";
 
 const UserHome = () => {
 
-
-  const userType = true;
+  const location = useLocation();
+  const navigate = useNavigate();
+  const userType = location.state.email === "admin@admin.com" ? true : false;
   // const aux = useLocation();
   // const [jwt, setJwt] = useState(aux.state);
   const cardsEmploye = [
@@ -47,7 +50,12 @@ const UserHome = () => {
   const cards = userType ? cardsAdmin : cardsEmploye;
   const tipo = userType ? 'Administrador' : 'Empleado';
 
-  const test = (e) =>{
+  const test = (title) =>{
+    if(title === "Registrar Empleados") {
+      navigate("/Register");
+    } else if (title === "Registrar Comidas") {
+      navigate("/Aliment");
+    }
     const jwt = localStorage.getItem('jwt');
     console.log(jwt);
     axios.get("https://backend-8ts0.onrender.com/admins", {
@@ -70,9 +78,11 @@ const UserHome = () => {
       divider={<Divider orientation="vertical" flexItem />}
       spacing={2}
     >
-      {cards.map((card, i) =>{
-        return(<div onClick={test} key={i}><CardHome {...card}></CardHome></div>);
-      })}
+          {cards.map((card, i) => (
+          <div onClick={() => test(card.title)} key={i}>
+            <CardHome {...card}></CardHome>
+          </div>
+        ))}
     </Stack>
   </>
  );
