@@ -32,6 +32,7 @@ const Login = () => {
     event.preventDefault();
     axios.post("https://backend-8ts0.onrender.com/login", user)
     .then((res) => {
+      localStorage.setItem('jwt', res.data.jwt);
       navigate('/UserHome');
       return;
     })
