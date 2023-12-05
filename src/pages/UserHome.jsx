@@ -1,3 +1,6 @@
+// import { useLocation } from 'react-router-dom';
+// import { useState } from 'react';
+import axios from 'axios';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import CardHome from '../components/CardHome';
@@ -9,7 +12,10 @@ import "../styles/UserHome.css";
 
 const UserHome = () => {
 
+
   const userType = true;
+  // const aux = useLocation();
+  // const [jwt, setJwt] = useState(aux.state);
   const cardsEmploye = [
     {
       img: img1,
@@ -41,6 +47,21 @@ const UserHome = () => {
   const cards = userType ? cardsAdmin : cardsEmploye;
   const tipo = userType ? 'Administrador' : 'Empleado';
 
+  const test = (e) =>{
+    const jwt = localStorage.getItem('user');
+    console.log(jwt);
+    axios.get("https://backend-8ts0.onrender.com/admins", {
+      headers: { Authorization: `Bearer ${jwt}` }
+    })
+    .then((res) => {
+      console.log(res.data);
+      return;
+    })
+    .catch((error) => {
+      setMsg(true);
+    });
+  }
+
  return(
   <>
     <h1>¡Bienvenido {tipo}!</h1>
@@ -50,7 +71,7 @@ const UserHome = () => {
       spacing={2}
     >
       {cards.map((card, i) =>{
-        return(<CardHome key={i} {...card}></CardHome>);
+        return(<div onClick={test} key={i}><CardHome {...card}></CardHome></div>);
       })}
     </Stack>
   </>
