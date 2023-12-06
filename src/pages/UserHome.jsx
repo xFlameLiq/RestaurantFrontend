@@ -10,6 +10,8 @@ import img1 from '../images/ordenar.jpg';
 import img2 from '../images/ticket.jpg';
 import img3 from '../images/empleado.jpg';
 import img4 from '../images/comida.jpg';
+import img5 from '../images/employees.jpg';
+import img6 from '../images/menu.jpg';
 import "../styles/UserHome.css";
 
 const UserHome = () => {
@@ -46,6 +48,16 @@ const UserHome = () => {
       title: "Registrar Comidas",
       desc: ``
     },
+    {
+      img: img5,
+      title: "Mostrar Empleados",
+      desc: ``
+    },
+    {
+      img: img6,
+      title: "Mostrar Comidas",
+      desc: ``
+    },
   ];
   const cards = userType ? cardsAdmin : cardsEmploye;
   const tipo = userType ? 'Administrador' : 'Empleado';
@@ -78,11 +90,13 @@ const UserHome = () => {
       divider={<Divider orientation="vertical" flexItem />}
       spacing={2}
     >
+      <div className='grid'>
           {cards.map((card, i) => (
           <div onClick={() => test(card.title)} key={i}>
             <CardHome {...card}></CardHome>
           </div>
         ))}
+        </div>
     </Stack>
   </>
  );
