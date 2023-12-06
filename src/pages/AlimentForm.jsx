@@ -1,4 +1,5 @@
 import { useForm, Controller } from "react-hook-form";
+import axios from 'axios';
 import {
   TextField,
   Button,
@@ -25,7 +26,17 @@ const AlimentForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    const jwt = localStorage.getItem('jwt');
+    axios.post("https://backend-8ts0.onrender.com/aliment", data, {
+      headers: { Authorization: `Bearer ${jwt}` }
+    })
+    .then((res) => {
+      console.log(res.data);
+      return;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
 
   return (

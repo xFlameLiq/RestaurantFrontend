@@ -21,8 +21,8 @@ const DropDown = ({ register, errors }) => {
         label={"Tipo"}
         onChange={handleType}
       >
-        <MenuItem value={"drink"}>Bebida</MenuItem>
-        <MenuItem value={"food"}>Comida</MenuItem>
+        <MenuItem value={"drink"}>drink</MenuItem>
+        <MenuItem value={"food"}>food</MenuItem>
       </Select>
     </FormControl>
   );
